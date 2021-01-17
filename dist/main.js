@@ -1,2 +1,2 @@
-console.log("test4");
+console.log("test");
 //# sourceMappingURL=main.js.map

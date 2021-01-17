@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack://RESTAURANT-PAGE/./src/index.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,IAAI","file":"main.js","sourcesContent":["console.log(\"test4\")"],"sourceRoot":""}
+{"version":3,"sources":["webpack://RESTAURANT-PAGE/./src/index.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,IAAI","file":"main.js","sourcesContent":["console.log(\"test\")"],"sourceRoot":""}
