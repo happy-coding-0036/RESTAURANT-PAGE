@@ -8,6 +8,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: "source-map",
+
+  devServer: {
+    contentBase: './dist',
+  },
+
   module: {  
     rules: [  
       {  
