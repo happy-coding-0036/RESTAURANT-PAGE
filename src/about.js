@@ -1,5 +1,6 @@
-const count = 5;
-const fun = function () {
-    console.log("is this working?")
+
+
+const loadAbout = function () {
+    console.log("hello")
 }
-export { count, fun }
+export { loadAbout }
