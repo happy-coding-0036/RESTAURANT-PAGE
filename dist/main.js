@@ -10,18 +10,14 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "loadAbout": () => /* binding */ loadAbout,
-/* harmony export */   "createElement": () => /* binding */ createElement
+/* harmony export */   "aboutBar": () => /* binding */ aboutBar
 /* harmony export */ });
-var createElement = function createElement(element, style, content2) {
-  var content = document.getElementById("content");
-  var newDiv = document.createElement(element);
-  newDiv.textContent = content2;
-  var newElement = content.appendChild(newDiv);
-  return newElement.classList.add(style);
-};
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
 
-var loadAbout = function loadAbout() {};
+
+var aboutBar = function aboutBar() {
+  return (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "about");
+};
 
 
 
@@ -40,9 +36,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_about_js__WEBPACK_IMPORTED_MODULE_2__.loadAbout)();
-(0,_about_js__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", "item", "this is a third test");
-(0,_about_js__WEBPACK_IMPORTED_MODULE_2__.createElement)("nav", "item2", "this is a nav test");
+(0,_about_js__WEBPACK_IMPORTED_MODULE_2__.aboutBar)();
+
+/***/ }),
+
+/***/ "./src/nav.js":
+/*!********************!*\
+  !*** ./src/nav.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createElement": () => /* binding */ createElement
+/* harmony export */ });
+var createElement = function createElement(element, style, content2) {
+  var content = document.getElementById("content");
+  var newDiv = document.createElement(element);
+  newDiv.textContent = content2;
+  var newElement = content.appendChild(newDiv);
+  return newElement.classList.add(style);
+};
+
+
 
 /***/ }),
 
@@ -71,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_restaurant_jpeg__WEBPACK_IMPORTED_MODULE_3__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".item {\n\n  background-color: blue;\n }\n\n .item2 {\n   background-color: red;\n }\n\n\nbody {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  }\n\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;EAEE,sBAAsB;CACvB;;CAEA;GACE,qBAAqB;CACvB;;;AAGD;IACI,mDAAoC;EACtC","sourcesContent":[".item {\n\n  background-color: blue;\n }\n\n .item2 {\n   background-color: red;\n }\n\n\nbody {\n    background: url('./restaurant.jpeg');\n  }\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#content {\n  display: flex;\n  background-color:pink;\n }\n\n .ele {\n  border: solid;\n }\n\n\nbody {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  }\n\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,qBAAqB;CACtB;;CAEA;EACC,aAAa;CACd;;;AAGD;IACI,mDAAoC;EACtC","sourcesContent":["#content {\n  display: flex;\n  background-color:pink;\n }\n\n .ele {\n  border: solid;\n }\n\n\nbody {\n    background: url('./restaurant.jpeg');\n  }\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
