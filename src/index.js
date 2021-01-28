@@ -8,7 +8,7 @@ import photo from './restaurant.jpeg';
 
 
 
-createElement("div", "ele", "about")
-createElement("div", "ele", "contact")
-createElement("div", "ele", "menu")
-createElement("div", "ele", "home")
+createElement("div", "ele", "about", "aboutID")
+createElement("div", "ele", "contact", "contactID")
+createElement("div", "ele", "menu", "menuID")
+createElement("div", "ele", "home", "homeID")
