@@ -2,27 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/about.js":
-/*!**********************!*\
-  !*** ./src/about.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "aboutBar": () => /* binding */ aboutBar
-/* harmony export */ });
-/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
-
-
-var aboutBar = function aboutBar() {
-  return (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "about");
-};
-
-
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -30,13 +9,16 @@ var aboutBar = function aboutBar() {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _restaurant_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./restaurant.jpeg */ "./src/restaurant.jpeg");
-/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.js */ "./src/about.js");
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _restaurant_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurant.jpeg */ "./src/restaurant.jpeg");
 
 
 
-(0,_about_js__WEBPACK_IMPORTED_MODULE_2__.aboutBar)();
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "about");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "contact");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "menu");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "home");
 
 /***/ }),
 

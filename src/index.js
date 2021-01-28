@@ -1,9 +1,14 @@
 
+import { createElement  } from "./nav.js";
+
 
 import './style.css'
 import photo from './restaurant.jpeg';
-import { aboutBar } from "./about.js"
 
 
 
-aboutBar()
+
+createElement("div", "ele", "about")
+createElement("div", "ele", "contact")
+createElement("div", "ele", "menu")
+createElement("div", "ele", "home")
