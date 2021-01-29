@@ -5,10 +5,13 @@
   padding: 0;
   margin: 0;
 }
-
+body {
+  background: url(restaurant2.jpeg);
+}
 
 #content {
   display: flex;
+ 
   background-color: white;
   justify-content: space-between;
   padding: 0 15px;
@@ -25,7 +28,16 @@ font-size: 20px;
  }
 
 
-body {
-    background: url('./restaurant.jpeg');
-  }
 
+
+  .info3 {
+    text-align: center;
+   color: #ffc600;
+    padding: 70px 0;
+}
+
+.info4 {
+    text-align: center;
+    color: #ffc600;
+    padding: 70px 0;
+}

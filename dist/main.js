@@ -11,14 +11,16 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _restaurant_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurant.jpeg */ "./src/restaurant.jpeg");
+/* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
 
 
 
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "about");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "contact");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "menu");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "home");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "about", "aboutID");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "contact", "contactID");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "menu", "menuID");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "home", "homeID");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createContent)("h1", "info3", "this is a heading");
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createContent)("p", "info4", "here is a long sentence or paragraph that I don't know how to add or how to remove.");
 
 /***/ }),
 
@@ -30,13 +32,22 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createElement": () => /* binding */ createElement
+/* harmony export */   "createElement": () => /* binding */ createElement,
+/* harmony export */   "createContent": () => /* binding */ createContent
 /* harmony export */ });
-var createElement = function createElement(element, style, content2) {
+var createElement = function createElement(element, style, content2, idName) {
   var content = document.getElementById("content");
   var newDiv = document.createElement(element);
   newDiv.textContent = content2;
   var newElement = content.appendChild(newDiv);
+  newElement.id = idName;
+  return newElement.classList.add(style);
+};
+
+var createContent = function createContent(element, style, content2) {
+  var newDiv = document.createElement(element);
+  newDiv.textContent = content2;
+  var newElement = document.body.appendChild(newDiv);
   return newElement.classList.add(style);
 };
 
@@ -60,16 +71,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _restaurant_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./restaurant.jpeg */ "./src/restaurant.jpeg");
+/* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
 // Imports
 
 
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_restaurant_jpeg__WEBPACK_IMPORTED_MODULE_3__);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_3__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\n\n#content {\n  display: flex;\n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .ele {\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\nbody {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  }\n\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;AACX;;;AAGA;EACE,aAAa;EACb,uBAAuB;EACvB,8BAA8B;EAC9B,eAAe;EACf,mBAAmB;EACnB,YAAY;;CAEb;;CAEA;;EAEC,iBAAiB;;AAEnB,eAAe;CACd;;;AAGD;IACI,mDAAoC;EACtC","sourcesContent":["\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\n\n#content {\n  display: flex;\n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .ele {\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\nbody {\n    background: url('./restaurant.jpeg');\n  }\n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n#content {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .ele {\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;AACX;AACA;EACE,mDAAiC;AACnC;;AAEA;EACE,aAAa;;EAEb,uBAAuB;EACvB,8BAA8B;EAC9B,eAAe;EACf,mBAAmB;EACnB,YAAY;;CAEb;;CAEA;;EAEC,iBAAiB;;AAEnB,eAAe;CACd;;;;;EAKC;IACE,kBAAkB;GACnB,cAAc;IACb,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,cAAc;IACd,eAAe;AACnB","sourcesContent":["\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(restaurant2.jpeg);\n}\n\n#content {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .ele {\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -542,13 +553,13 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./src/restaurant.jpeg":
-/*!*****************************!*\
-  !*** ./src/restaurant.jpeg ***!
-  \*****************************/
+/***/ "./src/restaurant2.jpeg":
+/*!******************************!*\
+  !*** ./src/restaurant2.jpeg ***!
+  \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "2d02e8ff432c79f5a20b.jpeg";
+module.exports = __webpack_require__.p + "19b5832c2f5d7d339e49.jpeg";
 
 /***/ })
 
