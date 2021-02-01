@@ -1,25 +1,40 @@
-const createElement = function (element, style, content2, idName) {
-    const content = document.getElementById("content")
-    const newDiv = document.createElement(element);
-    newDiv.textContent = content2
-    const newElement = content.appendChild(newDiv);
+
+
+const buildElement = function (element, style, content2, idName) {
+    
+    const newElement = document.createElement(element);
+    newElement.textContent = content2
     newElement.id = idName;
-    return newElement.classList.add(style)
-    
+    newElement.classList.add(style)
+
+    return newElement
 }
 
 
-const createContent = function (element, style, content2) {
-    
-    const newDiv = document.createElement(element);
-   
-    newDiv.textContent = content2
-    const newElement = document.body.appendChild(newDiv);
-   return newElement.classList.add(style)
+const buildNavBar = function() {
+
+
+    const content = document.getElementById("content")
+    const aboutNav = buildElement("div", "navStyle", "about", null)
+    const contactNav = buildElement("div", "navStyle", "contact", null)
+    const menuNav = buildElement("div", "navStyle", "menu", null)
+    const homeNav = buildElement("div", "navStyle", "home", null)
+
+    const navContainer = buildElement("div", "navConStyle", null, null)
+
+    const attachedNav = content.appendChild(navContainer)
+    attachedNav.appendChild(aboutNav)
+    attachedNav.appendChild(contactNav) 
+    attachedNav.appendChild(menuNav) 
+    attachedNav.appendChild(homeNav)
+
+
 }
 
 
-export { createElement, createContent }
+
+
+export {buildElement, buildNavBar }
 
 
 

@@ -2,6 +2,35 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/about.js":
+/*!**********************!*\
+  !*** ./src/about.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "aboutContent": () => /* binding */ aboutContent
+/* harmony export */ });
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+
+
+var aboutContent = function aboutContent() {
+  var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerId");
+  var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "this is a heading", "aboutID");
+  var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "here is a long sentence or paragraph that I don't know how to add or how to remove.", "paraID");
+  var content = document.getElementById("content");
+  var headContent = container.appendChild(heading);
+  var paraContent = container.appendChild(para);
+  var attachedCon = content.appendChild(container);
+  attachedCon.appendChild(headContent);
+  attachedCon.appendChild(paraContent);
+};
+
+
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -10,17 +39,15 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
+/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./about.js */ "./src/about.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
 
 
 
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "about", "aboutID");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "contact", "contactID");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "menu", "menuID");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", "ele", "home", "homeID");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createContent)("h1", "info3", "this is a heading");
-(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.createContent)("p", "info4", "here is a long sentence or paragraph that I don't know how to add or how to remove.");
+
+(0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildNavBar)();
+(0,_about_js__WEBPACK_IMPORTED_MODULE_1__.aboutContent)();
 
 /***/ }),
 
@@ -32,23 +59,29 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createElement": () => /* binding */ createElement,
-/* harmony export */   "createContent": () => /* binding */ createContent
+/* harmony export */   "buildElement": () => /* binding */ buildElement,
+/* harmony export */   "buildNavBar": () => /* binding */ buildNavBar
 /* harmony export */ });
-var createElement = function createElement(element, style, content2, idName) {
-  var content = document.getElementById("content");
-  var newDiv = document.createElement(element);
-  newDiv.textContent = content2;
-  var newElement = content.appendChild(newDiv);
+var buildElement = function buildElement(element, style, content2, idName) {
+  var newElement = document.createElement(element);
+  newElement.textContent = content2;
   newElement.id = idName;
-  return newElement.classList.add(style);
+  newElement.classList.add(style);
+  return newElement;
 };
 
-var createContent = function createContent(element, style, content2) {
-  var newDiv = document.createElement(element);
-  newDiv.textContent = content2;
-  var newElement = document.body.appendChild(newDiv);
-  return newElement.classList.add(style);
+var buildNavBar = function buildNavBar() {
+  var content = document.getElementById("content");
+  var aboutNav = buildElement("div", "navStyle", "about", null);
+  var contactNav = buildElement("div", "navStyle", "contact", null);
+  var menuNav = buildElement("div", "navStyle", "menu", null);
+  var homeNav = buildElement("div", "navStyle", "home", null);
+  var navContainer = buildElement("div", "navConStyle", null, null);
+  var attachedNav = content.appendChild(navContainer);
+  attachedNav.appendChild(aboutNav);
+  attachedNav.appendChild(contactNav);
+  attachedNav.appendChild(menuNav);
+  attachedNav.appendChild(homeNav);
 };
 
 
@@ -80,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_3__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n#content {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .ele {\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;AACX;AACA;EACE,mDAAiC;AACnC;;AAEA;EACE,aAAa;;EAEb,uBAAuB;EACvB,8BAA8B;EAC9B,eAAe;EACf,mBAAmB;EACnB,YAAY;;CAEb;;CAEA;;EAEC,iBAAiB;;AAEnB,eAAe;CACd;;;;;EAKC;IACE,kBAAkB;GACnB,cAAc;IACb,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,cAAc;IACd,eAAe;AACnB","sourcesContent":["\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(restaurant2.jpeg);\n}\n\n#content {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .ele {\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n.navConStyle {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .navStyle{\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;AACX;AACA;EACE,mDAAiC;AACnC;;AAEA;EACE,aAAa;;EAEb,uBAAuB;EACvB,8BAA8B;EAC9B,eAAe;EACf,mBAAmB;EACnB,YAAY;;CAEb;;CAEA;;EAEC,iBAAiB;;AAEnB,eAAe;CACd;;;;;EAKC;IACE,kBAAkB;GACnB,cAAc;IACb,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,cAAc;IACd,eAAe;AACnB","sourcesContent":["\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(restaurant2.jpeg);\n}\n\n.navConStyle {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .navStyle{\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

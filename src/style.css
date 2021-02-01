@@ -9,7 +9,7 @@ body {
   background: url(restaurant2.jpeg);
 }
 
-#content {
+.navConStyle {
   display: flex;
  
   background-color: white;
@@ -20,7 +20,7 @@ body {
 
  }
 
- .ele {
+ .navStyle{
   
   padding: 15px 5px;
 
