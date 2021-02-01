@@ -23,11 +23,11 @@ const buildNavBar = function() {
     const navContainer = buildElement("div", "navConStyle", null, null)
 
     const attachedNav = content.appendChild(navContainer)
+    
+    attachedNav.appendChild(homeNav)
+    attachedNav.appendChild(menuNav) 
     attachedNav.appendChild(aboutNav)
     attachedNav.appendChild(contactNav) 
-    attachedNav.appendChild(menuNav) 
-    attachedNav.appendChild(homeNav)
-
 
 }
 

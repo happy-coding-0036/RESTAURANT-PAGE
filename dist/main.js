@@ -75,6 +75,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var homeContent = function homeContent() {
   var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerHomeId");
+  container.classList.add("open");
   var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "home heading", "homeID");
   var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "home home home here is a long sentence or paragraph that I don't know how to add or how to remove.", "parahomeID");
   var content = document.getElementById("content");
@@ -174,10 +175,10 @@ var buildNavBar = function buildNavBar() {
   var homeNav = buildElement("div", "navStyle", "home", null);
   var navContainer = buildElement("div", "navConStyle", null, null);
   var attachedNav = content.appendChild(navContainer);
+  attachedNav.appendChild(homeNav);
+  attachedNav.appendChild(menuNav);
   attachedNav.appendChild(aboutNav);
   attachedNav.appendChild(contactNav);
-  attachedNav.appendChild(menuNav);
-  attachedNav.appendChild(homeNav);
 };
 
 
@@ -209,7 +210,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_3__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n.navConStyle {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .navStyle{\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n.containerStyle {\n\n  display: none;\n}\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;AACX;AACA;EACE,mDAAiC;AACnC;;AAEA;EACE,aAAa;;EAEb,uBAAuB;EACvB,8BAA8B;EAC9B,eAAe;EACf,mBAAmB;EACnB,YAAY;;CAEb;;CAEA;;EAEC,iBAAiB;;AAEnB,eAAe;CACd;;AAED;;EAEE,aAAa;AACf;;;EAGE;IACE,kBAAkB;GACnB,cAAc;IACb,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,cAAc;IACd,eAAe;AACnB","sourcesContent":["\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(restaurant2.jpeg);\n}\n\n.navConStyle {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .navStyle{\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n.containerStyle {\n\n  display: none;\n}\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n.navConStyle {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .navStyle{\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n.containerStyle {\n\n  display: none;\n}\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}\n\n\n.containerStyle.open {\n  display: block;\n  }", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":";;AAEA;EACE,sBAAsB;EACtB,UAAU;EACV,SAAS;AACX;AACA;EACE,mDAAiC;AACnC;;AAEA;EACE,aAAa;;EAEb,uBAAuB;EACvB,8BAA8B;EAC9B,eAAe;EACf,mBAAmB;EACnB,YAAY;;CAEb;;CAEA;;EAEC,iBAAiB;;AAEnB,eAAe;CACd;;AAED;;EAEE,aAAa;AACf;;;EAGE;IACE,kBAAkB;GACnB,cAAc;IACb,eAAe;AACnB;;AAEA;IACI,kBAAkB;IAClB,cAAc;IACd,eAAe;AACnB;;;AAGA;EACE,cAAc;EACd","sourcesContent":["\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\nbody {\n  background: url(restaurant2.jpeg);\n}\n\n.navConStyle {\n  display: flex;\n \n  background-color: white;\n  justify-content: space-between;\n  padding: 0 15px;\n  align-items: center;\n  opacity: 0.8;\n\n }\n\n .navStyle{\n  \n  padding: 15px 5px;\n\nfont-size: 20px;\n }\n\n.containerStyle {\n\n  display: none;\n}\n\n\n  .info3 {\n    text-align: center;\n   color: #ffc600;\n    padding: 70px 0;\n}\n\n.info4 {\n    text-align: center;\n    color: #ffc600;\n    padding: 70px 0;\n}\n\n\n.containerStyle.open {\n  display: block;\n  }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
