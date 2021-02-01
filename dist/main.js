@@ -18,7 +18,65 @@ __webpack_require__.r(__webpack_exports__);
 var aboutContent = function aboutContent() {
   var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerId");
   var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "this is a heading", "aboutID");
-  var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "here is a long sentence or paragraph that I don't know how to add or how to remove.", "paraID");
+  var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "About about about here is a long sentence or paragraph that I don't know how to add or how to remove.", "paraID");
+  var content = document.getElementById("content");
+  var headContent = container.appendChild(heading);
+  var paraContent = container.appendChild(para);
+  var attachedCon = content.appendChild(container);
+  attachedCon.appendChild(headContent);
+  attachedCon.appendChild(paraContent);
+};
+
+
+
+/***/ }),
+
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "contactContent": () => /* binding */ contactContent
+/* harmony export */ });
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+
+
+var contactContent = function contactContent() {
+  var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerContactId");
+  var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "Contact page heading", "contactID");
+  var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "contact contact contact  here is a long sentence or paragraph that I don't know how to add or how to remove.", "para2ID");
+  var content = document.getElementById("content");
+  var headContent = container.appendChild(heading);
+  var paraContent = container.appendChild(para);
+  var attachedCon = content.appendChild(container);
+  attachedCon.appendChild(headContent);
+  attachedCon.appendChild(paraContent);
+};
+
+
+
+/***/ }),
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "homeContent": () => /* binding */ homeContent
+/* harmony export */ });
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+
+
+var homeContent = function homeContent() {
+  var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerHomeId");
+  var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "home heading", "homeID");
+  var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "home home home here is a long sentence or paragraph that I don't know how to add or how to remove.", "parahomeID");
   var content = document.getElementById("content");
   var headContent = container.appendChild(heading);
   var paraContent = container.appendChild(para);
@@ -40,14 +98,52 @@ var aboutContent = function aboutContent() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
 /* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./about.js */ "./src/about.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
+/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ "./src/contact.js");
+/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
+
+
+
 
 
 
 
 (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildNavBar)();
 (0,_about_js__WEBPACK_IMPORTED_MODULE_1__.aboutContent)();
+(0,_contact_js__WEBPACK_IMPORTED_MODULE_2__.contactContent)();
+(0,_home_js__WEBPACK_IMPORTED_MODULE_3__.homeContent)();
+(0,_menu_js__WEBPACK_IMPORTED_MODULE_4__.menuContent)();
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "menuContent": () => /* binding */ menuContent
+/* harmony export */ });
+/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+
+
+var menuContent = function menuContent() {
+  var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerMenuId");
+  var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "menu heading", "menuID");
+  var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "menu menu menu here is a long sentence or paragraph that I don't know how to add or how to remove.", "paraMenuID");
+  var content = document.getElementById("content");
+  var headContent = container.appendChild(heading);
+  var paraContent = container.appendChild(para);
+  var attachedCon = content.appendChild(container);
+  attachedCon.appendChild(headContent);
+  attachedCon.appendChild(paraContent);
+};
+
+
 
 /***/ }),
 
