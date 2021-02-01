@@ -27,7 +27,10 @@ body {
 font-size: 20px;
  }
 
+.containerStyle {
 
+  display: none;
+}
 
 
   .info3 {
