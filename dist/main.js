@@ -104,6 +104,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 
 
 
@@ -116,6 +128,22 @@ __webpack_require__.r(__webpack_exports__);
 (0,_contact_js__WEBPACK_IMPORTED_MODULE_2__.contactContent)();
 (0,_home_js__WEBPACK_IMPORTED_MODULE_3__.homeContent)();
 (0,_menu_js__WEBPACK_IMPORTED_MODULE_4__.menuContent)();
+var navParent = document.getElementById("navId");
+navParent.addEventListener("click", openTab);
+var element = document.querySelectorAll(".containerStyle");
+var home = document.getElementById("containerHomeId");
+
+function openTab(event) {
+  if (event.target.id === "homeId") {
+    _toConsumableArray(element).map(function (item) {
+      if (item.classList.contains("open")) {
+        //item.removeClass("open")
+        // home.addClass("open")
+        console.log(item);
+      }
+    });
+  }
+}
 
 /***/ }),
 
@@ -169,11 +197,11 @@ var buildElement = function buildElement(element, style, content2, idName) {
 
 var buildNavBar = function buildNavBar() {
   var content = document.getElementById("content");
-  var aboutNav = buildElement("div", "navStyle", "about", null);
-  var contactNav = buildElement("div", "navStyle", "contact", null);
-  var menuNav = buildElement("div", "navStyle", "menu", null);
-  var homeNav = buildElement("div", "navStyle", "home", null);
-  var navContainer = buildElement("div", "navConStyle", null, null);
+  var aboutNav = buildElement("div", "navStyle", "about", "aboutId");
+  var contactNav = buildElement("div", "navStyle", "contact", "contactId");
+  var menuNav = buildElement("div", "navStyle", "menu", "menuId");
+  var homeNav = buildElement("div", "navStyle", "home", "homeId");
+  var navContainer = buildElement("div", "navConStyle", null, "navId");
   var attachedNav = content.appendChild(navContainer);
   attachedNav.appendChild(homeNav);
   attachedNav.appendChild(menuNav);

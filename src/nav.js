@@ -15,12 +15,12 @@ const buildNavBar = function() {
 
 
     const content = document.getElementById("content")
-    const aboutNav = buildElement("div", "navStyle", "about", null)
-    const contactNav = buildElement("div", "navStyle", "contact", null)
-    const menuNav = buildElement("div", "navStyle", "menu", null)
-    const homeNav = buildElement("div", "navStyle", "home", null)
+    const aboutNav = buildElement("div", "navStyle", "about","aboutId")
+    const contactNav = buildElement("div", "navStyle", "contact", "contactId")
+    const menuNav = buildElement("div", "navStyle", "menu", "menuId")
+    const homeNav = buildElement("div", "navStyle", "home", "homeId")
 
-    const navContainer = buildElement("div", "navConStyle", null, null)
+    const navContainer = buildElement("div", "navConStyle", null, "navId")
 
     const attachedNav = content.appendChild(navContainer)
     
