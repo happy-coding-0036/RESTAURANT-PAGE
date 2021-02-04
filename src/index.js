@@ -23,24 +23,39 @@ const navParent = document.getElementById("navId")
 navParent.addEventListener("click", openTab)
 
 
-const element = document.querySelectorAll(".containerStyle")
+const elements = document.querySelectorAll(".containerStyle")
 const home = document.getElementById("containerHomeId")
+const menu = document.getElementById("containerMenuId")
+const about = document.getElementById("containerId")
+const contact = document.getElementById("containerContactId")
 
 function openTab(event) {
 
     if (event.target.id === "homeId") {
-
-          [...element].map(item => {
-              if (item.classList.contains("open")) {
-                 //item.removeClass("open")
-                // home.addClass("open")
-
-                console.log(item)
-             }
-
-          })
+         
+        addRemoveClass(home)
         
+    } else if (event.target.id === "menuId") {
+     
+       addRemoveClass(menu)
+
+    } else if (event.target.id === "aboutId") {
+
+       addRemoveClass(about)
+           
+    } else if (event.target.id === "contactId") {
+
+        addRemoveClass(contact)
+      
     }
+
+function addRemoveClass(item) {
+    elements.forEach(element => {
+        element.classList.remove("open")
+        item.classList.add("open")
+    })
+}
+
 }
 
 

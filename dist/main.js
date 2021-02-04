@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var aboutContent = function aboutContent() {
   var container = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("div", "containerStyle", null, "containerId");
-  var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "this is a heading", "aboutID");
+  var heading = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("h1", "info3", "About heading", "aboutID");
   var para = (0,_nav_js__WEBPACK_IMPORTED_MODULE_0__.buildElement)("p", "info4", "About about about here is a long sentence or paragraph that I don't know how to add or how to remove.", "paraID");
   var content = document.getElementById("content");
   var headContent = container.appendChild(heading);
@@ -104,18 +104,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _restaurant2_jpeg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./restaurant2.jpeg */ "./src/restaurant2.jpeg");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 
 
@@ -130,17 +118,27 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (0,_menu_js__WEBPACK_IMPORTED_MODULE_4__.menuContent)();
 var navParent = document.getElementById("navId");
 navParent.addEventListener("click", openTab);
-var element = document.querySelectorAll(".containerStyle");
+var elements = document.querySelectorAll(".containerStyle");
 var home = document.getElementById("containerHomeId");
+var menu = document.getElementById("containerMenuId");
+var about = document.getElementById("containerId");
+var contact = document.getElementById("containerContactId");
 
 function openTab(event) {
   if (event.target.id === "homeId") {
-    _toConsumableArray(element).map(function (item) {
-      if (item.classList.contains("open")) {
-        //item.removeClass("open")
-        // home.addClass("open")
-        console.log(item);
-      }
+    addRemoveClass(home);
+  } else if (event.target.id === "menuId") {
+    addRemoveClass(menu);
+  } else if (event.target.id === "aboutId") {
+    addRemoveClass(about);
+  } else if (event.target.id === "contactId") {
+    addRemoveClass(contact);
+  }
+
+  function addRemoveClass(item) {
+    elements.forEach(function (element) {
+      element.classList.remove("open");
+      item.classList.add("open");
     });
   }
 }
