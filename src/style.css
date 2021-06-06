@@ -6,7 +6,13 @@
   margin: 0;
 }
 body {
+<<<<<<< HEAD
   background: url(image.jpg);
+=======
+  background: url(restaurant2.jpeg);
+  width: 100%;
+  height: 100vh;
+>>>>>>> 0ec9af8e44804ba838e973e17ab39b551ff2fccb
 }
 
 .navConStyle {
